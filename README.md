@@ -1,5 +1,3 @@
-# dMRI_Visualization
-
 # dMRI Ensemble Visualization Directory
 
 This repository documents the structure and content of the dMRI ensemble model visualization outputs for multiple sclerosis (MS) diagnosis.
@@ -44,14 +42,14 @@ BASE_DIR
 
 ### 1. Text Files (`dti.txt`, `smi.txt`, `wdki.txt`)
 
-Each text file provides a qualitative description of the corresponding modality, including observations on:
+Each text file provides a qualitative description of the corresponding modality, including examples grouped by prediction correctness and saliency characteristics:
 
-* **True Positives**: Correct MS classifications.
-* **False Positives**: Incorrectly predicted MS cases.
-* **True Negatives**: Correct non-MS classifications.
-* **False Negatives**: Missed MS cases.
+* **Typical MS case**: True Positive — correctly classified MS cases with strong model attention (i.e., high `weighted_prob_sum` > 100).
+* **Atypical Non-MS case**: False Positive — incorrectly predicted as MS, despite being non-MS.
+* **Typical Non-MS case**: True Negative — correctly classified non-MS with little or no false activation.
+* **Atypical MS case**: False Negative — missed MS diagnoses, often due to subtle or atypical features.
 
-These summaries are helpful for identifying representative examples and interpreting model behavior.
+Samples in each group are ordered by `weighted_prob_sum`, which reflects the overall activation level in the saliency map. Higher values appear earlier, indicating stronger model attention.
 
 ---
 
