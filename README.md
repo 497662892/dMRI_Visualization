@@ -9,7 +9,7 @@ This repository documents the structure and content of the dMRI ensemble model v
 ## 📁 Directory Structure
 
 ```
-/gpfs/scratch/jm10850/ms_data/Visualization_dmri_ensemble/20250426/
+BASE_DIR
 │
 ├── DTI/
 │   ├── M0067/
